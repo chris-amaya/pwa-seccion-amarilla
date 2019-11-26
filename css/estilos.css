@@ -1,0 +1,359 @@
+/* =========================== 
+            CARDS
+   ===========================*/
+.mdl-demo .mdl-layout__content section:not(:last-of-type) {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.mdl-demo .mdl-card__actions a {
+       color: #00BCD4;
+       margin: 0;
+}
+
+.mdl-demo main > .mdl-layout__tab-panel {
+    padding: 8px;
+    /* padding-top: 48px; */
+}
+
+.mdl-demo section.section--center {
+    max-width: 860px;
+  }
+
+.mdl-demo .mdl-card__supporting-text + .mdl-card__actions {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.ribbon {
+    width: 100%;
+    height: 40vh;
+    background-color: #3F51B5;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.main {
+    margin-top: -35vh;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.main-container {
+    max-width: 1600px;
+    width: calc(100% - 16px);
+    margin: 0 auto;
+}
+
+.demo-layout.is-small-screen .content {
+    padding: 40px 28px;
+}
+.content {
+    border-radius: 2px;
+    padding: 80px 56px;
+    margin-bottom: 80px;
+}
+
+.content iframe {
+    width: 100%;
+
+}
+
+.camera {
+    background: #ff7cbe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen {
+    background: #1f7cbe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grillaFotos > * {
+    height: 80px;
+}
+
+.take-photo {
+    background: #f39c12;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+.photo-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.photo-container .cerrar {
+    position: fixed;
+    z-index: 200;
+    right: 10px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 64px;
+}
+
+button#button-photo {
+    z-index: 400;
+    bottom: 50px;
+    color: #fff;
+    background: #e67e22;
+}
+
+.photo-container video {
+    position: fixed;
+    width: fit-content;
+    height: 100%;
+    z-index: 150;
+    object-fit: cover;
+}
+
+.oculto {
+    display: none;
+}
+
+div#mapa {
+    margin-bottom: 20px;
+}
+
+.mdc-image-list__item {
+    position: relative;
+} 
+
+.mdc-image-list__item .borrarImg {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 10;
+    /* background: #e74c3c; */
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    
+}
+
+.mdc-image-list__item .borrarImg:hover {
+    cursor: pointer;
+}
+
+.mdc-image-list__item .borrarImg i {
+    color: #fff;
+    padding: 3px;
+}
+
+#subirFotosHTML {
+    width: 100%; 
+}
+
+.contenedorButtonFotos{
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.formPersonalizado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.floating-button {
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 30px;
+  }
+
+/* ================================ 
+    MEDIA QUERYIES
+   ================================*/ 
+
+@media all and (orientation:portrait) {
+    .photo-container .cerrar {
+        bottom: 50px;
+        right: 10px;
+    }
+    
+    button#button-photo {
+        transform: rotate(90deg);
+        bottom: 0px;
+    }
+
+    .photo-container {
+        position: fixed;
+        align-items: center;
+        justify-content: left;
+        align-items: center;
+    }
+    .photo-container video {
+        transform: rotate(90deg);
+        width: 100%;
+    }
+}
+@media all and (orientation:landscape) {
+    .photo-container .cerrar {
+        position: fixed;
+        z-index: 200;
+        right: 10px;
+        top: 10px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 64px;
+    }
+    
+    button#button-photo {
+        z-index: 400;
+        bottom: 50px;
+        color: #fff;
+        background: #e67e22;
+    }
+}
+
+
+
+
+
+/*  ====================
+
+    ====================
+*/
+
+.side-nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0
+}
+
+.side-nav:before {
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    transition: opacity 233ms cubic-bezier(0, 0, .21, 1)
+}
+
+.new-recording-btn, .side-nav__content {
+    overflow: hidden;
+    will-change: transform
+}
+
+.side-nav--visible {
+    pointer-events: auto
+}
+
+.side-nav--visible:before {
+    opacity: .7
+}
+
+.side-nav__content {
+    background: #FAFAFA;
+    width: 304px;
+    height: 100%;
+    outline: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    -webkit-transform: translateX(-102%);
+    transform: translateX(-102%)
+}
+
+.side-nav__content--animatable {
+    transition: -webkit-transform 233ms cubic-bezier(0, 0, .21, 1);
+    transition: transform 233ms cubic-bezier(0, 0, .21, 1)
+}
+
+.side-nav__header {
+    background: url(../img/side-nav-bg@2x.jpg) #673AB7;
+    background-size: cover;
+    width: 100%;
+    height: 171px;
+    position: relative
+}
+
+.side-nav__title {
+    font-size: 16px;
+    line-height: 1;
+    color: #FFF;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    height: 16px;
+    font-weight: 500
+}
+
+.side-nav__body {
+    padding-top: 8px
+}
+
+.side-nav__version {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 14px;
+    opacity: .54
+}
+
+.side-nav__home, .side-nav__delete-all, .side-nav__delete-memos, .side-nav__add, .side-nav__login {
+    font-family: Roboto;
+    font-size: 14px;
+    outline: 0;
+    height: 48px;
+    padding-left: 72px;
+    text-align: left;
+    display: block;
+    border: none;
+    background: url(/images/ic_delete_24px.svg) 16px 12px no-repeat;
+    color: rgba(0, 0, 0, .87);
+    cursor: pointer
+}
+
+.side-nav__delete-all {
+    background-image: url(/images/ic_restore_24px.svg)
+}
+
+.side-nav__home {
+    background-image: url(../img/sharp-home-24px.svg);
+    line-height: 48px;
+    text-decoration: none
+}
+
+.side-nav__add {
+    background-image: url(../img/sharp-add-24px.svg);
+    line-height: 48px;
+    text-decoration: none
+}
+
+.side-nav__login {
+    background-image: url(../img/sharp-meeting_room-24px.svg);
+    line-height: 48px;
+    text-decoration: none
+}
+
+.container-view-enterprise a {
+    text-decoration: none;
+}

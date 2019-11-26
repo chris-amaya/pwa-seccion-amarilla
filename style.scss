@@ -1,0 +1,6 @@
+@import "@material/image-list/mdc-image-list"; 
+/* @import "../node_modules/@material/image-list/mdc-image-list.scss";  */
+.my-image-list {
+    @include mdc-image-list-standard-columns(4);
+    
+};

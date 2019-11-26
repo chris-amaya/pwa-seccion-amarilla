@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/bundle.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body class="mdl-demo" >
+    <div id="app">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <span class="mdl-layout-title">PWA</span>
+                <div class="mdl-layout-spacer"></div>
+                    <nav class="mdl-navigation ">
+                        <a class="mdl-navigation__link" href="/help">Ayuda</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">PWA</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="index.html">Inicio</a>
+                    <a class="mdl-navigation__link" href="/help">Ayuda</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content">
+                <div class="mdl-grid mdl-grid--no-spacing login">
+                    <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--4-col-tablet mdl-cell--3-col-phone">
+                        <form action="#" method="POST" class="form formPersonalizado" id="formLogin">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded mdl-cell--12-col">
+                                <input class="mdl-textfield__input" type="text" id="nombre" name="nombre">
+                                <label class="mdl-textfield__label" for="nombre">Nombre</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded mdl-cell--12-col">
+                                <input class="mdl-textfield__input" type="text" id="apellido" name="apellido">
+                                <label class="mdl-textfield__label" for="apellido">Apellido</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded mdl-cell--12-col">
+                                <input class="mdl-textfield__input" type="text" id="usuario" name="usuario">
+                                <label class="mdl-textfield__label" for="usuario">Nombre de usuario</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded mdl-cell--12-col">
+                                <input class="mdl-textfield__input" type="password" id="password" name="password">
+                                <label class="mdl-textfield__label" for="password">Password</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded mdl-cell--12-col">
+                                <input class="mdl-textfield__input" type="password" id="password2" name="password2">
+                                <label class="mdl-textfield__label" for="password2">Repetir Password</label>
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--4-col mdl-cell--stretch mdl-grid--no-spacing mdl-grid">
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet mdl-cell--3-col-phone" id="login">
+                                login
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main> 
+        </div>
+    </div>
+    
+    <div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+            <div class="mdl-snackbar__text"></div>
+            <button class="mdl-snackbar__action" type="button"></button>
+        </div>
+    
+    <script src="js/libs/material.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/login.js"></script>
+    
+</body>
+</html>
