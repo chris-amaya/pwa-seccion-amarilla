@@ -61,10 +61,11 @@ function confirmacionBorrarFoto(id)
             const response = await fetch(`${url}?nombreFoto=${newID}`);
             const data = await response.json();
             dialog.close();
-            if(data.respuesta)
+            if(data.resp)
             {
+                console.log(newID);
                 document.querySelector(`[data-name="${newID}"]`).parentElement.parentElement.remove()
-                mostrarToast(data.respuesta);
+                mostrarToast(data.resp);
             } else if (data.error) {
                 mostrarToast(data.error);
             }

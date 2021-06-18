@@ -10,3 +10,5 @@ RewriteRule ^new-enterprise/$ ./new-enterprise.php
 RewriteRule ^login$ ./login.php
 
 RewriteRule ^deleteEnterprise/(.*)$ ./controladores/deleteEnterprise.php?enterpriseID=$1
+RewriteRule ^deleteEnterprise/(.*)$ ./controladores/borrarFoto.controlador.php?nombreFoto=$1
+
