@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^category/(.*)$ ./category.php?category=$1
+RewriteRule ^enterprise/(.*)$ ./enterprise.php?enterpriseName=$1
+RewriteRule ^new-enterprise/$ ./new-enterprise.php

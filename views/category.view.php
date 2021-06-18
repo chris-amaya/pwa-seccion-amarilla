@@ -22,7 +22,7 @@
                             <p><?php echo $row['descEnterprise'] ?></p>
                         </div>
                         <div class="mdl-card__actions">
-                            <a class="mdl-button" href="/seccion_amarilla/enterprise/<?php echo $row['nameEnterprise'] ?>">Ver Más</a>
+                            <a class="mdl-button" href="/enterprise/<?php echo $row['nameEnterprise'] ?>">Ver Más</a>
                         </div>
                     </div>
                 </section>

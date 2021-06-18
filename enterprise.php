@@ -7,7 +7,7 @@
     include_once('controladores/enterprise.controller.php');
     
     $giro;
-
+    
     
     if(isset($enterprise['typeEnterprise'])) {
         $giro = new Category($con);
