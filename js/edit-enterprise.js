@@ -102,10 +102,9 @@ function subirInfo()
         twitter: document.getElementById('twitter').value,
         IsActive: Number(document.getElementById('active').value),
         update: 1,
-        oldName: enterprise[6]
+        oldName: decodeURIComponent(enterprise[enterprise.length - 1])
     }
-    console.log(info);
-
+    
     const url = 'edit-enterprise.php';
     var photos = [];
 

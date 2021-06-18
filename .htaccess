@@ -1,6 +1,12 @@
+php_flag display_errors on 
+    
 RewriteEngine On
 RewriteBase /
 
 RewriteRule ^category/(.*)$ ./category.php?category=$1
+RewriteRule ^enterprise/edit-enterprise/(.*)$ ./edit-enterprise.php?nameEnterprise=$1
 RewriteRule ^enterprise/(.*)$ ./enterprise.php?enterpriseName=$1
 RewriteRule ^new-enterprise/$ ./new-enterprise.php
+RewriteRule ^login$ ./login.php
+
+RewriteRule ^deleteEnterprise/(.*)$ ./controladores/deleteEnterprise.php?enterpriseID=$1

@@ -1,5 +1,7 @@
 <?php
-    require_once('credentials.php');
+    define('__ROOT__', dirname(dirname(__FILE__)));
+
+    require_once(__ROOT__.'/credentials.php');
     ob_start();
     session_start();
 
