@@ -8,7 +8,6 @@ if(isset($_GET['enterpriseID'])) {
     
     $enterprise = new Enterprise($con);
     $deleteEnterprise = $enterprise->deleteEnterprise($idEnterprise);
-    print_r($deleteEnterprise);
     if($deleteEnterprise == 1) {
         echo json_encode(array(
             'msg' => 'Empresa borrada con éxito',

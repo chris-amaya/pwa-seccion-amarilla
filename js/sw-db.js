@@ -13,25 +13,6 @@ function guardarFotos( foto )
 }
 
 // Postear mensajes a la API
-function postearFotos() 
-{
-    const posteos = [];
-    return db.allDocs({ include_docs: true }).then( docs => {
-        docs.rows.forEach( row => {
-            const doc = row.doc;
-            const fetchPom =  fetch('uploadInfo.php', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(doc)
-                }).then( res => {
-                    return db.remove(doc);
-                });
-            posteos.push( fetchPom );
-        }); // fin del foreach
-        return Promise.all( posteos );
-
-    });
-}
 
 function postearEmpresa() {
     const posteos = [];

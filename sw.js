@@ -38,12 +38,6 @@ self.addEventListener('install', e => {
 self.addEventListener('fetch', e => {
     // console.log(e.request.url)
     let respuesta;
-    if (e.request.url.includes('/uploadInfo.php'))
-    {
-        console.log('procesando oaiddasofoasod...')
-        respuesta = manejoFotos( DYNAMIC_CACHE, e.request );
-    }
-
     if(e.request.url.includes('/new-enterprise.php')) {
         // respuesta = manejo
         console.log('procesando nueva empresa...')

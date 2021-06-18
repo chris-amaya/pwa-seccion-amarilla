@@ -4,8 +4,8 @@
     $data = json_decode(file_get_contents('php://input'), true);
     $_POST = $data;
     
-    require 'funciones/funciones.php';
-    $conexion = conexion('seccion_amarilla', 'root', 'celeron');
+    require_once(__ROOT__.'/controladores/config.php');
+    $conexion = conexion('seccion_amarilla', 'root', '');
     $errors;
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
