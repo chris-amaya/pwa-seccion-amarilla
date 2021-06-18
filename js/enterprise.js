@@ -119,7 +119,7 @@ function subirInfo()
         facebook: document.getElementById('facebook').value,
         twitter: document.getElementById('twitter').value,
     }
-    console.log(info);
+    
 
     const url = 'new-enterprise.php';
     var photos = [];
@@ -131,6 +131,8 @@ function subirInfo()
             photos.push(photoToUpload.src);
         }
     }
+
+    console.log(info, photos);
         fetch(url, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -146,7 +148,7 @@ function subirInfo()
             if(data.resp)
             {
                 mostrarToast(data.resp);
-                window.location.href = 'index.php';
+                // window.location.href = 'index.php';
             } else if(data.offline) {
                 mostrarToast('Estado sin conexión, se enviara apenas se recupere la señal')
             }

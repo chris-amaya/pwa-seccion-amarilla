@@ -1,5 +1,4 @@
-<?php 
-
+<?php
     if(isset($_POST['info']['enterpriseName']))
     {
         $name        = $_POST['info']['enterpriseName'];
@@ -10,7 +9,6 @@
         $twitter     = $_POST['info']['twitter'];
         $telephone   = $_POST['info']['telephone'];
         $email       = $_POST['info']['email'];
-
         $alreadyExists = $enterprise->getEnterprise($name); 
         // COMPROBAR QUE LA EMPRESA AÚN NO EXISTA
         if(!$alreadyExists)
@@ -23,24 +21,23 @@
                 {
                     $file_name = $_POST['photos'][$i];
                     $newName = substr($file_name, 22, 32);
-                    $destinationFolder = 'fotos/';
+                    $DIRECTORY = '/fotos/';
+                    $path = $_SERVER['DOCUMENT_ROOT'].$DIRECTORY;
                     $filteredData = explode(',', $file_name);
                     $unencoded = base64_decode($filteredData[1]);
-                    $randomName = rand(0, 99999);
-                    $fp = fopen($destinationFolder.$randomName.'.png', 'a');
+                    $randomName = rand(0, 99999) . '.png';
+                    $fullFileName = $path.$randomName; 
+                    $fp = fopen($fullFileName, 'a');
                     fwrite($fp, $unencoded);
                     fclose($fp);
-                    $randomName = $randomName.'.png';
-                    $route = $destinationFolder.$randomName;
-
-                    $enterprise->insertPhoto($randomName, $route, $name);
+                    $enterprise->insertPhoto($randomName, $DIRECTORY.$randomName, $name);
                 }      
             }
+            
             if($result && $enterprise)
             {
                 echo json_encode(array(
                     'resp' => 'Empresa agregada, espere por autorización',
-                    
                 ));
             } else 
             {
@@ -48,20 +45,11 @@
                     'error' => 'Algo ha salido mal'
                 ));
             }
-
-
         } else {
             echo json_encode(array(
                 'error' => 'Una empresa con el mismo nombre ya existe',
                 $alreadyExists
             ));
         }
-
-
-
-        
     }
-
-
-
 ?>
