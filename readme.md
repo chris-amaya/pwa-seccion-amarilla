@@ -1,6 +1,6 @@
 # Sección Amarilla
 
-Sección amarilla es un proyecto universitario que sirve como directorio de empresas el cual simula la funcionalidad de seccionamarilla.com
+Sección amarilla es un proyecto universitario que sirve como directorio de empresas el cual simula la funcionalidad de [seccionamarilla.com.mx](https://www.seccionamarilla.com.mx/)
 
 ## Contenido
 Durante el desarrollo de este proyecto en la Universidad Interamericana para el Desarrollo [UNID](https://www.unid.edu.mx/) solamante se pedía que fuera un sitio web en el cual se pudiera registrar empresas y poderlas visualizar por categorías, yo fui mas allá con las especificaciones y agregué lo siguiente:
