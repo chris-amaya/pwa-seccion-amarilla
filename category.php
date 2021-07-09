@@ -8,6 +8,8 @@
     $category = $_GET['category'];
 
     $result = $enterprise->returnEnterprisesByCategory($_GET['category']);
+    $rowsCount = mysqli_num_rows($result);
+    $rows = $result->fetch_assoc();
 
     include_once('views/header.php');
     include_once('views/category.view.php');

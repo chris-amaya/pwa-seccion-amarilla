@@ -14,20 +14,30 @@
             <main class="mdl-layout__content">
                 <div class="mdl-layout__tab-panel is-active cantainerEnterprises" id="overview">
                     
-                <?php while($row = $result->fetch_assoc()): ?>
-                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                    <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-                        <div class="mdl-card__supporting-text">
-                            <h4><?php echo $row['nameEnterprise'] ?></h4>
-                            <p><?php echo $row['descEnterprise'] ?></p>
+                <?php if($rowsCount > 0): ?>
+                    <?php while($row = $result->fetch_assoc()): ?>
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <div class="mdl-card mdl-cell mdl-cell--12-col">
+                            <div class="mdl-card__supporting-text">
+                                <h4><?php echo $row['nameEnterprise'] ?></h4>
+                                <p><?php echo $row['descEnterprise'] ?></p>
+                            </div>
+                            <div class="mdl-card__actions">
+                                <a class="mdl-button" href="/enterprise/<?php echo $row['nameEnterprise'] ?>">Ver Más</a>
+                            </div>
                         </div>
-                        <div class="mdl-card__actions">
-                            <a class="mdl-button" href="/enterprise/<?php echo $row['nameEnterprise'] ?>">Ver Más</a>
+                    </section>        
+                    <?php endwhile; ?>
+
+                <?php else: ?>
+                    <section class="section--center mdl-grid">
+                        <div class="mdl-card mdl-cell mdl-cell--12-col">
+                            <div class="mdl-card__supporting-text">
+                                <p style="text-align: center"><?php echo 'No hay compañias que mostrar' ?></p>
+                            </div>
                         </div>
-                    </div>
-                </section>
-                    
-                <?php endwhile; ?>
+                    </section>   
+                <?php endif ?>
                 </div>
             </main> 
         </div>
