@@ -3,7 +3,7 @@
 Sección amarilla es un proyecto universitario que sirve como directorio de empresas el cual simula la funcionalidad de seccionamarilla.com
 
 ## Contenido
-Durante el desarrollo de este proyecto en la Universidad Interamericana para el Desarrollo (UNID) solamante se pedía que fuera un sitio web en el cual se pudiera registrar empresas y poderlas visualizar por categorías, yo fui mas allá con las especificaciones y agregué lo siguiente:
+Durante el desarrollo de este proyecto en la Universidad Interamericana para el Desarrollo [UNID](https://www.unid.edu.mx/) solamante se pedía que fuera un sitio web en el cual se pudiera registrar empresas y poderlas visualizar por categorías, yo fui mas allá con las especificaciones y agregué lo siguiente:
 
 ## Carateristicas
 * PWA: 
@@ -20,8 +20,7 @@ Durante el desarrollo de este proyecto en la Universidad Interamericana para el 
 * Crear un script para automatizar la instalación del proyecto.
 
 ## Demo
-Si le interesa ver este proyecto en live puede visitar seccion-amarilla.chrisamaya.com.mx
-
+Si le interesa ver este proyecto en live puede visitar [seccion-amarilla.chrisamaya.com.mx]()
 Para entrar al panel de administración `/login`
 
 ```
@@ -71,7 +70,7 @@ ir a la siguiente ruta en el navegador [seccion.localhost]()
 
 ## Notas
 * Para poder agregar la ubicación de una empresa 
-    * Ir a maps.google.com 
+    * Ir a [Google Maps](maps.google.com).
     * Seleccionar la ubicación.
     * Seleccionar el panel izquierdo.
     * Seleccionar la opción `Compartir o incorporar mapa`
