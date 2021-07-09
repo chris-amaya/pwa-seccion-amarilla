@@ -20,7 +20,7 @@ Durante el desarrollo de este proyecto en la Universidad Interamericana para el 
 * Crear un script para automatizar la instalación del proyecto.
 
 ## Demo
-Si le interesa ver este proyecto en live puede visitar [seccion-amarilla.chrisamaya.com.mx]()
+Si le interesa ver este proyecto en live puede visitar [seccion-amarilla.chrisamaya.com.mx](https://seccion-amarilla.chrisamaya.com.mx)
 Para entrar al panel de administración `/login`
 
 ```
@@ -66,11 +66,11 @@ a2ensite seccion_amarilla.localhost.conf
 systemctl reload apache2
 ```
 
-ir a la siguiente ruta en el navegador [seccion.localhost]()
+ir a la siguiente ruta en el navegador [seccion.localhost](http://seccion.localhost)
 
 ## Notas
 * Para poder agregar la ubicación de una empresa 
-    * Ir a [Google Maps](maps.google.com).
+    * Ir a [Google Maps](https://maps.google.com).
     * Seleccionar la ubicación.
     * Seleccionar el panel izquierdo.
     * Seleccionar la opción `Compartir o incorporar mapa`
