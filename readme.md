@@ -66,6 +66,19 @@ a2ensite seccion_amarilla.localhost.conf
 systemctl reload apache2
 ```
 
+crear el siguiente archivo en la raiz del proyecto `credentials.php` con el siguiente contenido y reemplazar la informacion segun sea el caso.
+
+```php
+<?php
+    $USER = 'userDB';
+    $PASSWORD = 'passDB';
+    $DB = 'DB'
+?>
+```
+crear la carpeta `fotos` en la raiz del proyecto.
+
+por ultimo importar la BD a MySQL, el script se encuentra en `/seccion_amarilla.sql`
+
 ir a la siguiente ruta en el navegador [seccion.localhost](http://seccion.localhost)
 
 ## Notas
