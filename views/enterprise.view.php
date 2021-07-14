@@ -16,15 +16,11 @@
             <div class="ribbon"></div>
             <main class="mdl-layout__content main">
                 <div class="main-container mdl-grid">
-                <!-- <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div> -->
-                    <div class="content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col container-view-enterprise">   
-                        <!-- <div class="demo-crumbs mdl-color-text--grey-500">
-                            Google &gt; Material Design Lite &gt; How to install MDL
-                        </div> -->
+                    <div class="content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col container-view-enterprise">
                         <?php if($enterprise): ?>
                             <h3 id="enterpriseName"><?php echo $enterprise['nameEnterprise'] ?></h3>
                             <p id="enterpriseDesc"><?php echo $enterprise['descEnterprise'] ?></p>
-                            <?php if($enterprise['coordinatesEnterprise']): ?>
+                            <?php if($enterprise['coordinatesEnterprise'] !== ''): ?>
                             <div id="mapa"> 
                                 <iframe src="<?php echo $enterprise['coordinatesEnterprise'] ?>" frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
